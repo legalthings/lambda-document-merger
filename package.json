@@ -1,0 +1,25 @@
+{
+  "name": "lambda-document-merger",
+  "version": "1.0.0",
+  "description": "Lambda function to merge documents",
+  "main": "index",
+  "scripts": {
+    "test": 0
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legalthings/lambda-document-merger.git"
+  },
+  "author": "LegalThings",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/legalthings/lambda-document-merger/issues"
+  },
+  "homepage": "https://github.com/legalthings/lambda-document-merger#readme",
+  "dependencies": {
+    "document-merger": "^1.0.0"
+  },
+  "devDependencies": {
+    "node-lambda": "^0.8.7"
+  }
+}
