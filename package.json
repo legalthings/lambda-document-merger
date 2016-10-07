@@ -4,7 +4,7 @@
   "description": "Lambda function to merge documents",
   "main": "index",
   "scripts": {
-    "test": 0
+    "simulate": "cross-env NODE_ENV=tests sh ./node_modules/.bin/node-lambda run"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,10 @@
   },
   "homepage": "https://github.com/legalthings/lambda-document-merger#readme",
   "dependencies": {
-    "document-merger": "^1.0.0"
+    "document-merger": "^1.0.1"
   },
   "devDependencies": {
+    "cross-env": "^3.1.1",
     "node-lambda": "^0.8.7"
   }
 }
