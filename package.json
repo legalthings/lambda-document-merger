@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/legalthings/lambda-document-merger#readme",
   "dependencies": {
-    "document-merger": "^1.0.0"
+    "document-merger": "^1.0.2"
   },
   "devDependencies": {
-    "node-lambda": "^0.8.7"
+    "node-lambda": "^0.8.15"
   }
 }
