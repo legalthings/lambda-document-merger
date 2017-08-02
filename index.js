@@ -6,13 +6,15 @@ const merger = new DocumentMerger();
 exports.handler = (event, context, callback) => {
     let documents = [];
 
-    if (!event || !event instanceof Array) {
-        return callback('Context must be an array');
+    if (!event || !event instanceof Object || !event instanceof Array) {
+        return callback('Payload must be an object or an array of html strings');
     }
 
-    event.forEach((html) => {
+    const html = event.documents || event;
+
+    html.forEach((html) => {
         if (!html instanceof String) {
-            return callback('Context array must contain strings');
+            return callback('Payload html array must contain strings');
         }
 
         documents.push({
@@ -21,9 +23,16 @@ exports.handler = (event, context, callback) => {
         });
     });
 
-    const result = merger.merge({
+    const options = {
         documents: documents
-    });
+    };
+
+    if (event instanceof Object) {
+        delete event.documents;
+        Object.assign(options, event);
+    }
+
+    const result = merger.merge(options);
 
     callback(null, result);
 }

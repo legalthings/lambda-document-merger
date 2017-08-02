@@ -11,6 +11,6 @@ The dependencies can be installed using npm.
 
     npm install
 
-Lambda function can be locally simulated.
+Lambda function can be locally simulated for testing.
 
-    node-lambda run
+    npm run simulate
